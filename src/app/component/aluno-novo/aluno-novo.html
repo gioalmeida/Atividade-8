@@ -1,0 +1,24 @@
+<div class="content">
+    <mat-cad-title>Aluno</mat-cad-title>
+    <mat-card-subtitle>Cadastrar Aluno</mat-card-subtitle>
+    <mat-divider></mat-divider>
+    <br>
+
+    <div>
+    <mat-form-field appearance="outline">
+        <mat-label>Nome do Aluno</mat-label>
+        <input matInput placeholder="Digite o Nome Aluno" id="nomeAluno" required [(ngModelL)] = "Aluno.nomealuno" nome="nomealuno">
+        <mat-icon matSuffix>et</mat-icon>
+        <mat-hint>Hint</mat-hint>
+      </mat-form-field>
+   </div>
+   
+   <div>
+       <span class= "bt" (click)="Salvar()">
+           <img class="img-btn" src="assets/img/check_box.png"> Salvar
+       </span>
+       <span class="bt" (click)="Cancelar">
+            <img class="img-btn" src="assets/img/check_box.png"> Cancelar
+       </span>
+   </div>
+</div>

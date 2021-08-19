@@ -1,0 +1,19 @@
+.content{
+    padding: 20px;
+}
+
+.mat-card-title{
+    font-size: 1.5;
+}
+
+mat.mat-card-title{
+    font-size: 1.5em;
+    font-weight: 800;
+}
+
+.img-central{
+    display: block;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}

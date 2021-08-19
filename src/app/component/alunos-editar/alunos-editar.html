@@ -1,0 +1,33 @@
+<div class="content">
+    <mat-cad-title>Alunos</mat-cad-title>
+    <mat-card-subtitle>Atualizar Lista de Alunos</mat-card-subtitle>
+    <br>
+
+    <div class="input">
+    <mat-form-field appearance="outline">
+        <mat-label>Id</mat-label>
+        <input matInput id="id Aluno" disabled[(ngModel)]="Aluno.idaluno" nome= "id.Aluno">
+        <mat-icon matSuffix>et</mat-icon>
+        <mat-hint>Hint</mat-hint>
+      </mat-form-field>
+   </div>
+
+   <div class="input2">
+    <mat-form-field appearance="outline">
+        <mat-label>Nome do Aluno</mat-label>
+        <input matInput id="nome Aluno" required[(ngModel)]="Aluno.nomealuno" nome= "nomealuno">
+        <mat-icon matSuffix>et</mat-icon>
+        <mat-hint>Hint</mat-hint>
+      </mat-form-field>
+
+   </div>
+   
+   <div>
+       <span class= "bt" (click)="Salvar()">
+           <img class="img-btn" src="assets/img/check_box.png"> Salvar
+       </span>
+       <span class="bt" (click)="Cancelar">
+            <img class="img-btn" src="assets/img/check_box.png"> Cancelar
+       </span>
+   </div>
+</div>

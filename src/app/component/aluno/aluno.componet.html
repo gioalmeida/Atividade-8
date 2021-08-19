@@ -1,0 +1,89 @@
+<div class="content">
+    <div>
+        <nav class="navbar navbar-expand navbar-dark bg-dark">
+          <a href="#" class="navbar-brand">Buscar Aluno</a>
+          <div class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a routerLink="http://localhorst:8080/sistema-academico/alunos" class="nav-link">Atualizar</a>
+            </li>
+            <li class="nav-item">
+              <a routerLink="http://sistema-academico/alunos" class="nav-link">Adcionar Aluno</a>
+            </li>
+          </div>
+        </nav>
+      
+        <div class="container mt-3">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+
+      <div class="content">
+        <mat-card-title>
+             Alunos
+        </mat-card-title>
+        <br>
+                <mat-card-subtitle>
+                    Lista de Alunos
+                </mat-card-subtitle>
+               
+        <br>
+        <div> clas="button">
+        
+        <mat-form-field appearance="outline">
+            <mat-label>Filtrar Alunos</mat-label>
+            <input matInput (keyup)="filtraralunos($event)">
+        </p>
+        <br><br>
+        <div class="mat-elevation-z1">
+            <table mat-table [dataSource]="alunoDataSource" matsort class="mat-elevation-z8">
+    
+                <ng-container matColumnDef="idaluno">
+                  <th mat-header-cell *matHeaderCellDef> Id. </th>
+                  <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+                </ng-container>
+              
+                <ng-container matColumnDef="nomealuno">
+                  <th mat-header-cell *matHeaderCellDef> nome</th>
+                  <td mat-cell *matCellDef="let curso"> {{curso.idaluno}} </td>
+                </ng-container>
+    
+                <ng-container matColumnDef="update">
+                    <th mat-header-cell *matHeaderCellDef> Id. </th>
+                    <td mat-cell *matCellDef="let element"> 
+                        
+                    </td>
+                  </ng-container>
+    
+                  <button mat-fab color="Update"(click)="navigateToCursoEditar(curso)">
+                    <mat-icon class= "mat-18> edit </mat-icon>
+                  </button>
+                
+                  <!-- Name Column -->
+                  <ng-container matColumnDef="delete">
+                    <th mat-header-cell *matHeaderCellDef> nome</th>
+                    <td mat-cell *matCellDef="let curso"> 
+                        
+                    </td>
+                  </ng-container>
+              
+                  <button mat-fab color="delete"(click)="deelte(Curso)">
+                    <mat-icon> delete </mat-icon>
+                  </button>
+              
+                  <tr class="mat-row" *matNowDataRow>
+                      <td cotspan-"8" class="mat-cell"> Esses dados não correspondem no filtro" {{input.value}}</td>
+                  </tr>
+                <tr mat-header-row *matHeaderRowDef="displayedidCursos"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+              </table>
+              <mat-paginator [length]="length"
+                   [pageSize]="pageSize"
+                   [pageSizeOptions]="pageSizeOptions"
+                   (page)="pageEvent = $event"
+                   aria-label="Select page">
+    </mat-paginator>
+        </div>
+    </div>
+
+    
+</div>

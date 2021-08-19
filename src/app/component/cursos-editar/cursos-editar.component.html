@@ -1,0 +1,34 @@
+<div class="content">
+    <mat-cad-title>Cursos</mat-cad-title>
+    <mat-card-subtitle>Atualizar Curso</mat-card-subtitle>
+    <mat-divider></mat-divider>
+    <br>
+
+    <div class="input">
+    <mat-form-field appearance="outline">
+        <mat-label>Id</mat-label>
+        <input matInput id="id curso" disabled[(ngModel)]="curso.idcurso" nome= "id.curso">
+        <mat-icon matSuffix>et</mat-icon>
+        <mat-hint>Hint</mat-hint>
+      </mat-form-field>
+   </div>
+
+   <div class="input2">
+    <mat-form-field appearance="outline">
+        <mat-label>Nome do Curso</mat-label>
+        <input matInput id="nome curso" required[(ngModel)]="curso.nomecurso" nome= "nomecurso">
+        <mat-icon matSuffix>et</mat-icon>
+        <mat-hint>Hint</mat-hint>
+      </mat-form-field>
+
+   </div>
+   
+   <div>
+       <span class= "bt" (click)="Salvar()">
+           <img class="img-btn" src="assets/img/check_box.png"> Salvar
+       </span>
+       <span class="bt" (click)="Cancelar">
+            <img class="img-btn" src="assets/img/check_box.png"> Cancelar
+       </span>
+   </div>
+</div>

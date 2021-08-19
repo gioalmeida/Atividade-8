@@ -1,0 +1,30 @@
+<ng-container>
+  <mat-toolbar class="header">
+    <span>
+      <img class="logo" src="assets/img/logo-branco.png">
+    </span>
+  </mat-toolbar>
+
+  <mat-sidenav-container class="container">
+    <mat-sidenav class="sidenav"
+                mode="side" opened
+                viewport="fixed"
+                fixedTopGap="top"
+                fixedBottomGap="bottom">
+      <mat-nav-list class="nav-list">
+        <a routerlink="/"> <span class="material-icons"> home </span> Home </a>
+        <br>
+        <a routerlink="/cursos"> <span class="metrial-icons">school </span> Cursos</a>
+     </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content class="content">
+
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+
+  <mat-toolbar class="footer">
+    <span>
+      Desenvolvido por Giovane
+    </span>
+  </mat-toolbar-row>
+</ng-container>
